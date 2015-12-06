@@ -5,10 +5,40 @@
  */
 package GUI;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.*;
+
 /**
  *
  * @author user
  */
-public class GUIMain {
+public class GUIMain extends JFrame{
+    private JButton ingresar, salir;
+    private JLabel lb_numJugadores;
+    private JComboBox combo_jugadores;
+    
+    public GUIMain(){
+        super("WarShip");
+        prepareElementos();
+        
+        
+    }
+
+    private void prepareElementos() {
+        setSize(700,700);
+	Dimension frameSize = getSize();
+	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	setLocation((screenSize.width -frameSize.width)/2,
+			(screenSize.height - frameSize.height)/2);
+			setVisible(true);
+    }
+            
+    
+    
+    
     
 }
