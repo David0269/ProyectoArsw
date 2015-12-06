@@ -6,6 +6,8 @@
 package GUI;
 
 import java.awt.Dimension;
+import java.awt.GridLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -35,11 +37,22 @@ public class JuegoBS extends JFrame{
         
         
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(0, 0, 700, 600);
-        panel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        panel1.setPreferredSize(new Dimension(500, 500));
+        setBounds(0, 0, 900, 700);
         
-        
+        //panel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        //panel1.setPreferredSize(new Dimension(200, 200));
+        panel1.setBounds(5, 5, 500, 500);
+        botones = new JButton[10][10];
+        panel1.setLayout(new GridLayout(10,10));
+        for(int i =0; i<10; i++){
+            for(int j=0; j < 10; j++){
+                System.out.println("i:"+i+" j:"+j);
+                botones[i][j] = new javax.swing.JButton();
+                panel1.add(botones[i][j]);
+            }
+        }
+        panel1.setVisible(true);
+        add(panel1);
         
        
         
