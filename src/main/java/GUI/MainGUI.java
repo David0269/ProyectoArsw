@@ -20,6 +20,7 @@ public class MainGUI extends javax.swing.JFrame {
         setVisible(true);
         setSize(500, 250);
         setLocationRelativeTo(null);
+        setResizable(false);
         
     }
 
@@ -34,7 +35,7 @@ public class MainGUI extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         btn_salir = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
+        combo = new javax.swing.JComboBox();
         btn_aceptar = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
@@ -57,9 +58,9 @@ public class MainGUI extends javax.swing.JFrame {
         getContentPane().add(btn_salir);
         btn_salir.setBounds(380, 170, 80, 23);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1 Jugador", "2 Jugadores", "3 Jugadores" }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(380, 110, 100, 20);
+        combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1 Jugador", "2 Jugadores", "3 Jugadores" }));
+        getContentPane().add(combo);
+        combo.setBounds(380, 110, 100, 20);
 
         btn_aceptar.setText("Aceptar");
         btn_aceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -80,6 +81,10 @@ public class MainGUI extends javax.swing.JFrame {
 
     private void btn_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aceptarActionPerformed
         // TODO add your handling code here:
+        String jugadores = combo.getSelectedItem().toString();
+        Juego juego = new Juego(jugadores);
+        dispose();
+        
         
     }//GEN-LAST:event_btn_aceptarActionPerformed
 
@@ -128,7 +133,7 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.JButton btn_aceptar;
     private javax.swing.JButton btn_salir;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox combo;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
