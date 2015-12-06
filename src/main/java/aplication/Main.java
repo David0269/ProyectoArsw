@@ -9,12 +9,13 @@ package aplication;
  *
  * @author user
  */
-import GUI.GUIMain;
+import GUI.*;
 
 public class Main {
     
-    public static void Main(String args[]){
-    GUIMain gui= new GUIMain();
+    public static void main(String args[]){
+    MainGUI gui= new MainGUI();
+    
 }
     
 }
