@@ -6,6 +6,7 @@
 package GUI;
 
 import java.awt.GridLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 /**
@@ -49,14 +50,18 @@ public class Juego extends javax.swing.JFrame {
         //panel1.setLayout(panel1Layout);
         panel1.setLayout(new GridLayout(10,10));
         botones = new JButton[10][10];
+        ImageIcon mar = new ImageIcon("C:\\Users\\user\\Documents\\NetBeansProjects\\WarShipI\\images\\rsz_agua2.jpg");
+        ImageIcon mar2 = new ImageIcon("C:\\Users\\user\\Documents\\NetBeansProjects\\WarShipI\\images\\rsz_explofuego.jpg");
+        
         
         for(int i =0; i<10; i++){
             for(int j=0; j < 10; j++){
                 System.out.println("i:"+i+" j:"+j);
-                botones[i][j] = new javax.swing.JButton();
+                botones[i][j] = new javax.swing.JButton(mar);
                 panel1.add(botones[i][j]);
             }
         }
+        botones[5][5].setIcon(mar2);
         panel1Layout.setHorizontalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 498, Short.MAX_VALUE)
