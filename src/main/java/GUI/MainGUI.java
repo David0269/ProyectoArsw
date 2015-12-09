@@ -71,8 +71,12 @@ public class MainGUI extends javax.swing.JFrame {
         getContentPane().add(btn_aceptar);
         btn_aceptar.setBounds(270, 170, 90, 23);
 
+<<<<<<< HEAD
         background.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Documents\\NetBeansProjects\\WarShipI\\images\\batallaInicio2.jpg")); // NOI18N
         background.setText("Aceptar");
+=======
+        background.setIcon(new javax.swing.ImageIcon("C:\\Users\\David\\Documents\\NetBeansProjects\\ProyectoArsw\\images\\batallaInicio.jpg")); // NOI18N
+>>>>>>> 82b6f691f174b080dbf0a6f6a54c732a3dc438c8
         getContentPane().add(background);
         background.setBounds(0, 0, 490, 250);
 
